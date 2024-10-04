@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kate Jia's Writing Sample</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4; /* Light background for contrast */
+            text-align: center; /* Center the content */
+            padding: 20px; /* Add some padding */
+        }
+
+        h1 {
+            color: #333; /* Darker color for the heading */
+        }
+
+        img {
+            border: 5px solid #007BFF; /* Blue border */
+            border-radius: 10px; /* Rounded corners */
+            margin: 10px; /* Space between images */
+            width: 70%; /* Set the width to 70% of the parent container */
+            max-width: 400px; /* Set a maximum width to prevent images from being too large */
+            height: auto; /* Maintain aspect ratio */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+            transition: transform 0.3s ease; /* Smooth transition for scaling */
+            cursor: pointer; /* Change cursor to pointer */
+        }
+
+        img:hover {
+            transform: scale(1.05); /* Slightly enlarge the image on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Kate Jia's Writing Sample:</h1>
+    <img src="./papers18pages/P1.png" alt="Writing Sample 1" onclick="openFullScreen(this)" />
+    <img src="./papers18pages/P2.png" alt="Writing Sample 2" onclick="openFullScreen(this)" />
+    <img src="./papers18pages/P3.png" alt="Writing Sample 3" onclick="openFullScreen(this)" />
+    <img src="./papers18pages/P4.png" alt="Writing Sample 4" onclick="openFullScreen(this)" />
+    <img src="./papers18pages/P5.png" alt="Writing Sample 5" onclick="openFullScreen(this)" />
+    <img src="./papers18pages/P6.png" alt="Writing Sample 6" onclick="openFullScreen(this)" />
+    <img src="./papers18pages/P7.png" alt="Writing Sample 7" onclick="openFullScreen(this)" />
+    <img src="./papers18pages/P8.png" alt="Writing Sample 8" onclick="openFullScreen(this)" />
+    <img src="./papers18pages/P9.png" alt="Writing Sample 9" onclick="openFullScreen(this)" />
+    <img src="./papers18pages/P10.png" alt="Writing Sample 10" onclick="openFullScreen(this)" />
+    <img src="./papers18pages/P11.png" alt="Writing Sample 11" onclick="openFullScreen(this)" />
+    <img src="./papers18pages/P12.png" alt="Writing Sample 12" onclick="openFullScreen(this)" />
+    <img src="./papers18pages/P13.png" alt="Writing Sample 13" onclick="openFullScreen(this)" />
+    <img src="./papers18pages/P14.png" alt="Writing Sample 14" onclick="openFullScreen(this)" />
+    <img src="./papers18pages/P15.png" alt="Writing Sample 15" onclick="openFullScreen(this)" />
+    <img src="./papers18pages/P16.png" alt="Writing Sample 16" onclick="openFullScreen(this)" />
+
+    <script>
+        function openFullScreen(image) {
+            // Create a new image element for full screen
+            const fullScreenImage = document.createElement('img');
+            fullScreenImage.src = image.src; // Set the source of the new image
+            fullScreenImage.style.position = 'fixed';
+            fullScreenImage.style.top = '50%';
+            fullScreenImage.style.left = '50%';
+            fullScreenImage.style.transform = 'translate(-50%, -50%)';
+            fullScreenImage.style.width = '100%'; // Make it full width
+            fullScreenImage.style.height = 'auto'; // Maintain aspect ratio
+            fullScreenImage.style.zIndex = '1000'; // Place it above other elements
+            fullScreenImage.style.cursor = 'pointer'; // Change cursor to pointer
+
+            // Create a div to overlay the full screen image
+            const overlay = document.createElement('div');
+            overlay.style.position = 'fixed';
+            overlay.style.top = '0';
+            overlay.style.left = '0';
+            overlay.style.width = '100%';
+            overlay.style.height = '100%';
+            overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.8)'; // Dark background
+            overlay.style.display = 'flex';
+            overlay.style.justifyContent = 'center';
+            overlay.style.alignItems = 'center';
+            overlay.style.zIndex = '999'; // Place it below the image
+
+            // Add the image to the overlay
+            overlay.appendChild(fullScreenImage);
+
+            // Close full screen when clicking on the image
+            fullScreenImage.onclick = function () {
+                document.body.removeChild(overlay);
+            };
+
+            // Append the overlay to the body
+            document.body.appendChild(overlay);
+        }
+    </script>
+</body>
+</html>

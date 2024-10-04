@@ -1,0 +1,25 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Light background for contrast */
+    text-align: center; /* Center the content */
+    padding: 20px; /* Add some padding */
+}
+
+h1 {
+    color: #333; /* Darker color for the heading */
+}
+
+img {
+    border: 5px solid #007BFF; /* Blue border */
+    border-radius: 10px; /* Rounded corners */
+    margin: 10px; /* Space between images */
+    width: 70%; /* Set the width to 70% of the parent container */
+    max-width: 400px; /* Set a maximum width to prevent images from being too large */
+    height: auto; /* Maintain aspect ratio */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: transform 0.3s ease; /* Smooth transition for scaling */
+}
+
+img:hover {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+}

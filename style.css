@@ -24,10 +24,10 @@ img:hover {
     transform: scale(1.05); /* Slightly enlarge the image on hover */
 }
 p{text-align: left;
-    margin-left: 140px;
-    margin-right: 160px;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 .list{text-align: left;
-    margin-left: 140px;
-    margin-right: 160px;
+    margin-left: 10%;
+    margin-right: 10%;
 }
